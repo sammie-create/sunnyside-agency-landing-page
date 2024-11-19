@@ -1,0 +1,315 @@
+@media screen and (min-width: 375px) {
+  body {
+    font-size: 1.8rem;
+  }
+  .hero-text h1,
+  .transform-text h1,
+  .stand-out-text h1 {
+    font-size: 3.5rem;
+  }
+  .graphic-design-text h1,
+  .photography-text h1 {
+    font-size: 3rem;
+  }
+  .transform-text,
+  .stand-out-text {
+    padding: 4rem 3rem;
+  }
+  #testimonials h4 {
+    font-size: 1.7rem;
+    letter-spacing: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar {
+    position: relative;
+    .hamburger {
+      position: absolute;
+      cursor: pointer;
+      right: 0;
+      top: 0.5rem;
+    }
+    .nav-links {
+      background-color: $white;
+      position: absolute;
+      z-index: 2;
+      width: 200%;
+      top: 80%;
+      padding: 4rem;
+      transform: translate(-50%, -10%);
+      clip-path: circle(10rem at 90% -30%);
+      -webkit-clip-path: circle(10rem at 90% -30%);
+      transition: all 1s ease-in-out;
+      a {
+        color: $darkGrayishBlue;
+        text-decoration: none;
+      }
+    }
+    .open {
+      clip-path: circle(80rem at 90% -10%);
+      -webkit-clip-path: circle(80rem at 90% -10%);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  body {
+    font-size: 1.5rem;
+  }
+  header {
+    background: url(/images/desktop/image-header.jpg) no-repeat center;
+    background-size: cover;
+    grid-template-rows: 5rem auto;
+
+    .logo {
+      display: grid;
+      align-content: center;
+      img {
+        width: 15rem;
+      }
+    }
+    .navbar {
+      .hamburger {
+        display: none;
+      }
+    }
+    .nav-links {
+      grid-template-columns: auto auto auto auto;
+      justify-content: space-between;
+      align-content: center;
+      background-color: inherit;
+      position: relative;
+      z-index: none;
+      width: inherit;
+      a {
+        align-self: center;
+        text-decoration: none;
+        color: $white;
+        font-size: 1.8rem;
+      }
+      button {
+        padding: 1rem 2rem;
+        font-family: var(--heading-text);
+        font-weight: 900;
+        font-size: 1.5rem;
+        color: $veryDarkDesaturatedBlue;
+        text-transform: uppercase;
+        outline: none;
+        border: none;
+        border-radius: 2rem;
+        background: $white;
+      }
+    }
+  }
+
+  #transform {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    figure {
+      order: 2;
+      background: url(/images/desktop/image-transform.jpg) no-repeat center;
+      background-size: 100% 100%;
+      padding-left: 100%;
+    }
+    .transform-text {
+      padding: 5rem 5rem;
+      text-align: left;
+    }
+  }
+
+  #stand-out {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    figure {
+      background: url(/images/desktop/image-stand-out.jpg) no-repeat center;
+      background-size: 100% 100%;
+      padding-left: 100%;
+    }
+    .stand-out-text {
+      padding: 5rem 5rem;
+      text-align: left;
+    }
+  }
+
+  #graphic-design {
+    background: url(/images/desktop/image-graphic-design.jpg) no-repeat center;
+    background-size: 100% 100%;
+    .graphic-design-text {
+      width: 40rem;
+      justify-self: center;
+    }
+  }
+  #photography {
+    background: url(/images/desktop/image-photography.jpg) no-repeat center;
+    background-size: 100% 100%;
+    .photography-text {
+      width: 40rem;
+      justify-self: center;
+    }
+  }
+
+  #testimonials {
+    grid-template-columns: auto auto auto;
+    column-gap: 2rem;
+    h4 {
+      grid-column: 1 / span 3;
+    }
+    figure {
+      padding-bottom: 0;
+      height: 13rem;
+    }
+    p {
+      height: 10rem;
+    }
+    b,
+    small {
+      padding-top: 0;
+    }
+    .testimonial1,
+    .testimonial2,
+    .testimonial3 {
+      display: grid;
+      grid-template-columns: auto;
+      row-gap: 3rem;
+    }
+  }
+
+  #image-gallery {
+    height: 78rem;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    .milkbottles {
+      background: url(/images/desktop/image-gallery-milkbottles.jpg) no-repeat
+        center;
+      background-size: 100% 100%;
+      padding-left: 100%;
+    }
+    .orange {
+      background: url(/images/desktop/image-gallery-orange.jpg) no-repeat center;
+      background-size: 100% 100%;
+      padding-left: 100%;
+    }
+    .cone {
+      background: url(/images/desktop/image-gallery-cone.jpg) no-repeat center;
+      background-size: 100% 100%;
+      padding-left: 100%;
+    }
+    .sugar-cubes {
+      background: url(/images/desktop/image-gallery-sugarcubes.jpg) no-repeat
+        center;
+      background-size: 100% 100%;
+      padding-left: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    height: 75rem;
+    .hero-text {
+      grid-template-rows: 25rem auto;
+      h1 {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  .lg-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  #transform {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 55rem 100%;
+    .transform-text {
+      justify-content: center;
+      align-content: center;
+      padding: 0;
+      width: 35rem;
+      margin: auto;
+      text-align: left;
+      h1 {
+        margin-bottom: 1rem;
+        font-size: 3rem;
+      }
+      p {
+        color: $veryDarkGrayishBlue;
+        margin-bottom: 3rem;
+        line-height: 1.5;
+      }
+      a {
+        font-family: var(--heading-text);
+        font-weight: 900;
+        color: $veryDarkDesaturatedBlue;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    }
+  }
+
+  #stand-out {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 55rem 100%;
+
+    .stand-out-text {
+      padding: 0;
+      width: 35rem;
+      margin: auto;
+
+      text-align: left;
+      h1 {
+        margin-bottom: 1rem;
+        font-size: 3rem;
+      }
+      p {
+        color: $veryDarkGrayishBlue;
+        margin-bottom: 3rem;
+        line-height: 1.5;
+      }
+      a {
+        font-family: var(--heading-text);
+        font-weight: 900;
+        color: $veryDarkDesaturatedBlue;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    }
+  }
+
+  #graphic-design {
+    background-size: cover;
+    height: 55rem;
+    .graphic-design-text {
+      width: 40rem;
+      justify-self: center;
+    }
+  }
+
+  #photography {
+    height: 55rem;
+    .graphic-design-text {
+      width: 50rem;
+      justify-self: center;
+    }
+  }
+
+  #testimonials {
+    width: 100rem;
+    margin: auto;
+  }
+
+  #image-gallery {
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 100%;
+    height: 40rem;
+  }
+}
